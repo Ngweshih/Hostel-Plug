@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Hostel Plug</title>
+    <link rel="stylesheet" href="Css/Hostel.css">
+    <link rel="stylesheet" href="Css/Footer.css">
+    <link rel="stylesheet" href="Css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="Home.html"> <img src="images/Logo.png" alt="hostelplug" width="70" height="40"> </a>
+                <p>Your perfect student accommodation finder</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <!-- <li><a href="gallery.html" class="active">Gallery</a></li> -->
+                    <li><a href="Reservation.html">Reservations</a></li>
+                    <li><a href="Review.html">Reviews</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="Registration.html" class="register-btn">Register</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Our Hostels Gallery</h2>
+            <div class="filter-options">
+                <select id="hostel-filter">
+                    <option value="all">All Hostels</option>
+                    <option value="new-life">New Life Hustle</option>
+                    <option value="catuc">Prime Hostel</option>
+                </select>
+                <select id="room-type-filter">
+                    <option value="all">All Room Types</option>
+                    <option value="single">Single Room</option>
+                    <option value="shared">Shared Room</option>
+                    <option value="apartment">Apartment</option>
+                </select>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-hostel="new-life" data-room="single">
+                    <img src="images/new-life-single.jpg" alt="New Life Hostel Single Room">
+                    <div class="image-info">
+                        <h3>New Life Hostel - Single Room</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-value">4.2/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-hostel="new-life" data-room="shared">
+                    <img src="images/new-life-shared.jpg" alt="New Life Hostel Shared Room">
+                    <div class="image-info">
+                        <h3>New Life Hostel - Shared Room</h3>
+                        <div class="rating">
+                            <span class="stars">★★★☆☆</span>
+                            <span class="rating-value">3.8/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-hostel="catuc" data-room="single">
+                    <img src="images/catuc-single.jpg" alt="Prime Hostel Single Room">
+                    <div class="image-info">
+                        <h3>Prime Hostel - Single Room</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-value">4.8/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-hostel="catuc" data-room="shared">
+                    <img src="images/catuc-shared.jpg" alt="Prime Hostel Shared Room">
+                    <div class="image-info">
+                        <h3>Prime Hostel - Shared Room</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-value">4.5/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-hostel="catuc" data-room="apartment">
+                    <img src="images/catuc-apartment.jpg" alt="Prime Hostel Apartment">
+                    <div class="image-info">
+                        <h3>Prime Hostel - Apartment</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-value">5.0/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-hostel="new-life" data-room="apartment">
+                    <img src="images/new-life-apartment.jpg" alt="New Life Hostel Apartment">
+                    <div class="image-info">
+                        <h3>New Life Hostel - Apartment</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-value">4.3/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Hostel Plug</h3>
+                    <p>Connecting students with quality, affordable accommodations near their universities since 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="Reservation.html">Reservations</a></li>
+                        <li><a href="Review.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@hostelplug.com</p>
+                    <p><i class="fas fa-phone"></i> +237 6XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Hostel Plug. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Icon -->
+    <a href="contact.html" class="floating-contact">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <script src="Hostel.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Hustle Plug</title>
+    <link rel="stylesheet" href="Css/Hostel.css">
+    <link rel="stylesheet" href="Css/Footer.css">
+    <link rel="stylesheet" href="Css/Hostel.css">
+    <link rel="stylesheet" href="Css/Registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Hostel Plug</h1>
+                <p>Your perfect student accommodation finder</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Reservation.html">Reservations</a></li>
+                    <li><a href="Review.html">Reviews</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="Registration.html" class="register-btn">Register</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-steps">
+                <div class="step completed">
+                    <span>1</span>
+                    <p>Registration</p>
+                </div>
+                <div class="step completed">
+                    <span>2</span>
+                    <p>Reservation</p>
+                </div>
+                <div class="step active">
+                    <span>3</span>
+                    <p>Payment</p>
+                </div>
+                <div class="step">
+                    <span>4</span>
+                    <p>Confirmation</p>
+                </div>
+            </div>
+
+            <h2>Complete Your Payment</h2>
+            <div class="payment-details">
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-item">
+                        <p>Hostel:</p>
+                        <p id="hostel-name">New Life Hustle</p>
+                    </div>
+                    <div class="summary-item">
+                        <p>Room Type:</p>
+                        <p id="room-type">Single Room</p>
+                    </div>
+                    <div class="summary-item">
+                        <p>Duration:</p>
+                        <p id="duration">1 Academic Year</p>
+                    </div>
+                    <div class="summary-item">
+                        <p>Amount:</p>
+                        <p id="amount">XAF 450,000</p>
+                    </div>
+                    <div class="summary-item total">
+                        <p>Total:</p>
+                        <p id="total">XAF 450,000</p>
+                    </div>
+                </div>
+
+                <div class="payment-methods">
+                    <h3>Payment Methods</h3>
+                    <div class="payment-options">
+                        <div class="payment-option active" data-method="mobile-money">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Money</span>
+                        </div>
+                        <div class="payment-option" data-method="credit-card">
+                            <i class="far fa-credit-card"></i>
+                            <span>Credit Card</span>
+                        </div>
+                        <div class="payment-option" data-method="bank-transfer">
+                            <i class="fas fa-university"></i>
+                            <span>Bank Transfer</span>
+                        </div>
+                    </div>
+
+                    <form id="paymentForm" class="mobile-money-form">
+                        <div class="form-group">
+                            <label for="mobile-network">Mobile Network</label>
+                            <select id="mobile-network" required>
+                                <option value="">Select network</option>
+                                <option value="mtn">MTN</option>
+                                <option value="orange">Orange</option>
+                                <option value="express-union">Express Union Mobile</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile-number">Mobile Number</label>
+                            <input type="tel" id="mobile-number" placeholder="6XX XXX XXX" required>
+                        </div>
+                        <button type="submit" class="cta-button">Complete Payment</button>
+                    </form>
+
+                    <form id="creditCardForm" class="credit-card-form" style="display: none;">
+                        <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Expiry Date</label>
+                                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" required>
+                        </div>
+                        <button type="submit" class="cta-button">Complete Payment</button>
+                    </form>
+
+                    <form id="bankTransferForm" class="bank-transfer-form" style="display: none;">
+                        <div class="form-group">
+                            <label for="bank-name">Bank Name</label>
+                            <select id="bank-name" required>
+                                <option value="">Select bank</option>
+                                <option value="afriland">Afriland First Bank</option>
+                                <option value="ecobank">Ecobank</option>
+                                <option value="scb">Standard Chartered Bank</option>
+                                <option value="uba">United Bank for Africa</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-number">Account Number</label>
+                            <input type="text" id="account-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-name">Account Name</label>
+                            <input type="text" id="account-name" required>
+                        </div>
+                        <button type="submit" class="cta-button">Complete Payment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Hostel Plug</h3>
+                    <p>Connecting students with quality, affordable accommodations near their universities since 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="Reservation.html">Reservations</a></li>
+                        <li><a href="Review.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@hostelplug.com</p>
+                    <p><i class="fas fa-phone"></i> +237 6XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Hostel Plug. All rights reserved.</p>
+            </div>
+        </div>
+    </footer> -->
+
+    <!-- Floating Contact Icon -->
+    <a href="contact.html" class="floating-contact">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <script src="Hostel.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Hustle Plug</title>
+    <link rel="stylesheet" href="Css/Hostel.css">
+    <link rel="stylesheet" href="Css/Footer.css">
+    <link rel="stylesheet" href="Css/Review.css">
+    <link rel="stylesheet" href="Css/Registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="Home.html"> <img src="images/Logo.png" alt="hostelplug" width="70" height="40"> </a>
+                <p>Your perfect student accommodation finder</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Reservation.html">Reservations</a></li>
+                    <!-- <li><a href="Review.html" class="active">Reviews</a></li> -->
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="Registration.html" class="register-btn">Register</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="reviews-section">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            
+            <div class="hostel-selector">
+                <select id="hostel-select">
+                    <option value="all">All Hostels</option>
+                    <option value="new-life">New Life Hostel</option>
+                    <option value="catuc">Prime Hostel</option>
+                </select>
+            </div>
+
+            <div class="add-review">
+                <h3>Share Your Experience</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="review-hostel">Hostel</label>
+                        <select id="review-hostel" required>
+                            <option value="">Select hostel</option>
+                            <option value="new-life">New Life Hostel</option>
+                            <option value="catuc">Prime Hostel</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-rating">Rating</label>
+                        <div class="star-rating">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                            <input type="hidden" id="review-rating" name="rating" value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Your Review</label>
+                        <textarea id="review-text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Submit Review</button>
+                </form>
+            </div>
+
+            <div class="reviews-container">
+                <div class="review-card" data-hostel="new-life">
+                    <div class="review-header">
+                        <div class="reviewer">
+                            <div class="avatar">JD</div>
+                            <div class="reviewer-info">
+                                <h4>John D.</h4>
+                                <p>University of Bamenda</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>4/5</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h3>New Life Hostel</h3>
+                        <p>Great location just 10 minutes walk to campus. The rooms are clean and the WiFi is decent. The only issue is sometimes the water pressure is low, but management is working on it.</p>
+                    </div>
+                    <div class="review-date">
+                        Posted on: March 15, 2023
+                    </div>
+                </div>
+
+                <div class="review-card" data-hostel="catuc">
+                    <div class="review-header">
+                        <div class="reviewer">
+                            <div class="avatar">SM</div>
+                            <div class="reviewer-info">
+                                <h4>Sarah M.</h4>
+                                <p>Catholic University Cameroon</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5/5</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h3>Prime Hostel</h3>
+                        <p>Absolutely love staying here! The apartments are modern and well-maintained. Security is top-notch and the common areas are cleaned daily. Worth every penny!</p>
+                    </div>
+                    <div class="review-date">
+                        Posted on: February 28, 2023
+                    </div>
+                </div>
+
+                <div class="review-card" data-hostel="new-life">
+                    <div class="review-header">
+                        <div class="reviewer">
+                            <div class="avatar">AE</div>
+                            <div class="reviewer-info">
+                                <h4>Amira E.</h4>
+                                <p>University of Bamenda</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★☆☆</span>
+                            <span>3/5</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h3>New Life Hostel</h3>
+                        <p>The shared rooms are affordable but can get noisy at night. The location is perfect for students though, with many cheap eateries nearby. The kitchen facilities could be better.</p>
+                    </div>
+                    <div class="review-date">
+                        Posted on: January 10, 2023
+                    </div>
+                </div>
+
+                <div class="review-card" data-hostel="catuc">
+                    <div class="review-header">
+                        <div class="reviewer">
+                            <div class="avatar">TK</div>
+                            <div class="reviewer-info">
+                                <h4>Thomas K.</h4>
+                                <p>Catholic University Cameroon</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>4/5</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h3>Prime Hostel</h3>
+                        <p>Very comfortable single rooms with good study desks. The 24/7 electricity is a big plus. Sometimes the WiFi is slow during peak hours, but overall a great place to stay.</p>
+                    </div>
+                    <div class="review-date">
+                        Posted on: December 5, 2022
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Hostel Plug</h3>
+                    <p>Connecting students with quality, affordable accommodations near their universities since 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="Reservation.html">Reservations</a></li>
+                        <li><a href="Review.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@hostelplug.com</p>
+                    <p><i class="fas fa-phone"></i> +237 6XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Hostel Plug. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Icon -->
+    <a href="contact.html" class="floating-contact">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <script src="Hostel.js"></script>
+</body>
+</html>
